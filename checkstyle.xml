@@ -9,7 +9,7 @@
     Description: Checkstyle rules for GantSign Java code.
 -->
 <module name="Checker">
-  <property name="severity" value="warning"/>
+  <property name="severity" value="error"/>
 
   <!-- Style -->
   <module name="TreeWalker">

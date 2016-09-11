@@ -28,6 +28,7 @@
       <property name="allowEmptyLambdas" value="true"/>
     </module>
     <module name="GenericWhitespace"/>
+    <module name="MethodParamPad"/>
     <module name="OperatorWrap"/>
     <module name="SeparatorWrap">
       <property name="tokens" value="COMMA"/>
@@ -36,8 +37,22 @@
       <property name="option" value="nl"/>
       <property name="tokens" value="DOT"/>
     </module>
+    <module name="NeedBraces"/>
+    <module name="LeftCurly">
+      <property name="maxLineLength" value="100"/>
+    </module>
+    <module name="RightCurly"/>
+    <module name="EmptyBlock"/>
     <module name="EmptyLineSeparator">
       <property name="allowNoEmptyLineBetweenFields" value="true"/>
+    </module>
+    <module name="OneStatementPerLine"/>
+    <module name="AnnotationLocation">
+      <property name="tokens" value="CLASS_DEF,INTERFACE_DEF,ENUM_DEF,METHOD_DEF,CTOR_DEF"/>
+    </module>
+    <module name="AnnotationLocation">
+      <property name="tokens" value="VARIABLE_DEF"/>
+      <property name="allowSamelineMultipleAnnotations" value="true"/>
     </module>
     <module name="AtclauseOrder"/>
     <module name="JavadocTagContinuationIndentation"/>
@@ -45,6 +60,7 @@
       <property name="ignoreInlineTags" value="false"/>
     </module>
     <module name="JavadocType"/>
+    <module name="JavadocParagraph"/>
     <module name="AvoidStarImport"/>
     <module name="RedundantImport"/>
     <module name="CustomImportOrder">

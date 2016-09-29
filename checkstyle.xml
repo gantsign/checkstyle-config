@@ -506,7 +506,9 @@
       parameter types, fields, and local variables for basic collection
       implementation types.
     -->
-    <module name="IllegalType"/>
+    <module name="IllegalType">
+      <property name="illegalClassNames" value="java.util.ArrayList, java.util.LinkedList, java.util.HashSet, java.util.HashMap, java.util.LinkedHashMap, java.util.LinkedHashSet, java.util.TreeSet, java.util.TreeMap"/>
+    </module>
 
     <!--
       Exceptions: ban mutable exceptions; be aware this only checks the fields

@@ -11,6 +11,8 @@
 <module name="Checker">
   <property name="severity" value="error"/>
 
+  <module name="SuppressWarningsFilter"/>
+
   <module name="TreeWalker">
 
     <!-- ************* -->
@@ -535,5 +537,6 @@
       <property name="max" value="2"/>
     </module>
 
+    <module name="SuppressWarningsHolder"/>
   </module>
 </module>

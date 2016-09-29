@@ -127,7 +127,6 @@
     </module>
     <module name="AvoidEscapedUnicodeCharacters">
       <property name="allowEscapesForControlCharacters" value="true"/>
-      <property name="allowByTailComment" value="true"/>
       <property name="allowNonPrintableEscapes" value="true"/>
     </module>
     <module name="MultipleVariableDeclarations"/>

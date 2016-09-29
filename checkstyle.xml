@@ -55,6 +55,7 @@
     <module name="OneStatementPerLine"/>
     <module name="DeclarationOrder"/>
     <module name="OverloadMethodsDeclarationOrder"/>
+    <module name="ModifierOrder"/>
     <module name="AnnotationLocation">
       <property name="tokens" value="CLASS_DEF,INTERFACE_DEF,ENUM_DEF,METHOD_DEF,CTOR_DEF"/>
     </module>
@@ -130,7 +131,6 @@
     <module name="MissingSwitchDefault"/>
     <module name="FallThrough"/>
     <module name="UpperEll"/>
-    <module name="ModifierOrder"/>
     <module name="NoFinalizer"/>
     <module name="VariableDeclarationUsageDistance"/>
     <module name="NonEmptyAtclauseDescription"/>

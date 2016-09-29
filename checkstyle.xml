@@ -387,7 +387,9 @@
     <!--
       Switch: fall though cases must have a "fall through" comment.
     -->
-    <module name="FallThrough"/>
+    <module name="FallThrough">
+      <property name="reliefPattern" value="fall through"/>
+    </module>
 
     <!--
       Longs: long literals must have an uppercase 'L' suffix.

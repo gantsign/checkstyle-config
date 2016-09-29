@@ -11,8 +11,12 @@
 <module name="Checker">
   <property name="severity" value="error"/>
 
-  <!-- Style -->
   <module name="TreeWalker">
+
+    <!-- ************* -->
+    <!-- *** Style *** -->
+    <!-- ************* -->
+
     <module name="LineLength">
       <property name="ignorePattern" value="^package.*|^import.*|http(s)?://"/>
       <property name="max" value="100"/>
@@ -72,7 +76,10 @@
       <property name="sortImportsInGroupAlphabetically" value="true"/>
     </module>
 
-    <!-- Naming conventions -->
+    <!-- ************************** -->
+    <!-- *** Naming conventions *** -->
+    <!-- ************************** -->
+
     <module name="AbbreviationAsWordInName">
       <property name="allowedAbbreviationLength" value="1"/>
       <property name="ignoreFinal" value="false"/>
@@ -104,7 +111,10 @@
       <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
     </module>
 
-    <!-- Quality checks -->
+    <!-- ********************** -->
+    <!-- *** Quality checks *** -->
+    <!-- ********************** -->
+
     <module name="OuterTypeFilename"/>
     <module name="IllegalTokenText">
       <property name="tokens" value="CHAR_LITERAL,STRING_LITERAL"/>
@@ -150,5 +160,6 @@
     <module name="IllegalType"/>
     <module name="IllegalCatch"/>
     <module name="IllegalThrows"/>
+
   </module>
 </module>

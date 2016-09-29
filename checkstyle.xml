@@ -56,6 +56,7 @@
     <module name="MultipleVariableDeclarations"/>
     <module name="DeclarationOrder"/>
     <module name="OverloadMethodsDeclarationOrder"/>
+    <module name="RedundantModifier"/>
     <module name="ModifierOrder"/>
     <module name="AnnotationLocation">
       <property name="tokens" value="CLASS_DEF,INTERFACE_DEF,ENUM_DEF,METHOD_DEF,CTOR_DEF"/>
@@ -150,7 +151,6 @@
     <module name="SimplifyBooleanExpression"/>
     <module name="SimplifyBooleanReturn"/>
     <module name="StringLiteralEquality"/>
-    <module name="RedundantModifier"/>
     <module name="ThrowsCount"/>
     <module name="ParameterNumber">
       <property name="max" value="3"/>

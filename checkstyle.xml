@@ -142,5 +142,6 @@
     <module name="ParameterNumber">
       <property name="max" value="3"/>
     </module>
+    <module name="ExplicitInitialization"/>
   </module>
 </module>

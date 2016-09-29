@@ -58,6 +58,7 @@
     <module name="ModifierOrder"/>
     <module name="AnnotationLocation">
       <property name="tokens" value="CLASS_DEF,INTERFACE_DEF,ENUM_DEF,METHOD_DEF,CTOR_DEF"/>
+      <property name="allowSamelineSingleParameterlessAnnotation" value="false"/>
     </module>
     <module name="AnnotationLocation">
       <property name="tokens" value="VARIABLE_DEF"/>

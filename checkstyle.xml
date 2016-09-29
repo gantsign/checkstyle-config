@@ -60,20 +60,25 @@
       Method/Constructor declarations & calls: ban padding immediately inside
       parentheses.
     -->
-    <module name="MethodParamPad"/>
+    <module name="MethodParamPad">
+      <property name="option" value="nospace"/>
+    </module>
 
     <!--
       Operator wrapping: when wrapping, operators must be wrapped on to the
       start of the new line rather than remaining on the end of the previous
       line.
     -->
-    <module name="OperatorWrap"/>
+    <module name="OperatorWrap">
+      <property name="option" value="nl"/>
+    </module>
 
     <!--
       Separator wrapping: when wrapping, commas must remain on the end of the
       line rather than being wrapped onto the next line.
     -->
     <module name="SeparatorWrap">
+      <property name="option" value="eol"/>
       <property name="tokens" value="COMMA"/>
     </module>
 
@@ -97,13 +102,16 @@
       Left braces: must be at the end of the line.
     -->
     <module name="LeftCurly">
+      <property name="option" value="eol"/>
       <property name="maxLineLength" value="100"/>
     </module>
 
     <!--
       Right braces: must be on the same line as `else`, `catch` and `finally`.
     -->
-    <module name="RightCurly"/>
+    <module name="RightCurly">
+      <property name="option" value="same"/>
+    </module>
 
     <!--
       Empty blocks: ban empty blocks.
@@ -210,7 +218,9 @@
     <!--
       JavaDoc: continuation indent must be 4 spaces.
     -->
-    <module name="JavadocTagContinuationIndentation"/>
+    <module name="JavadocTagContinuationIndentation">
+      <property name="offset" value="4"/>
+    </module>
 
     <!--
       JavaDoc: Ensure that JavaDoc fits on within the line length and doclet
@@ -405,7 +415,9 @@
       Declaration usage: ensure the distance between declaration of a variable
       and its use is no more than 3.
     -->
-    <module name="VariableDeclarationUsageDistance"/>
+    <module name="VariableDeclarationUsageDistance">
+      <property name="allowedDistance" value="3"/>
+    </module>
 
     <!--
       JavaDoc: Ensure classes, interfaces and enums have class level JavaDoc.
@@ -525,13 +537,17 @@
       Exception handling: ban catching java.lang.Exception, java.lang.Throwable
       and java.lang.RuntimeException.
     -->
-    <module name="IllegalCatch"/>
+    <module name="IllegalCatch">
+      <property name="illegalClassNames" value="java.lang.Exception, java.lang.Throwable, java.lang.RuntimeException"/>
+    </module>
 
     <!--
       Exception handling: ban throwing java.lang.Throwable, java.lang.Error and
       java.lang.RuntimeException.
     -->
-    <module name="IllegalThrows"/>
+    <module name="IllegalThrows">
+      <property name="illegalClassNames" value="java.lang.Throwable, java.lang.Error, java.lang.RuntimeException"/>
+    </module>
 
     <!--
       Throws clause: limit the number of exceptions that can be declared in the

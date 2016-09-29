@@ -53,6 +53,7 @@
       <property name="allowNoEmptyLineBetweenFields" value="true"/>
     </module>
     <module name="OneStatementPerLine"/>
+    <module name="MultipleVariableDeclarations"/>
     <module name="DeclarationOrder"/>
     <module name="OverloadMethodsDeclarationOrder"/>
     <module name="ModifierOrder"/>
@@ -128,7 +129,6 @@
       <property name="allowEscapesForControlCharacters" value="true"/>
       <property name="allowNonPrintableEscapes" value="true"/>
     </module>
-    <module name="MultipleVariableDeclarations"/>
     <module name="MissingSwitchDefault"/>
     <module name="FallThrough"/>
     <module name="UpperEll"/>

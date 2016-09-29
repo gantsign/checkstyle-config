@@ -49,6 +49,8 @@
       <property name="allowNoEmptyLineBetweenFields" value="true"/>
     </module>
     <module name="OneStatementPerLine"/>
+    <module name="DeclarationOrder"/>
+    <module name="OverloadMethodsDeclarationOrder"/>
     <module name="AnnotationLocation">
       <property name="tokens" value="CLASS_DEF,INTERFACE_DEF,ENUM_DEF,METHOD_DEF,CTOR_DEF"/>
     </module>
@@ -120,7 +122,6 @@
     <module name="UpperEll"/>
     <module name="ModifierOrder"/>
     <module name="NoFinalizer"/>
-    <module name="OverloadMethodsDeclarationOrder"/>
     <module name="VariableDeclarationUsageDistance"/>
     <module name="NonEmptyAtclauseDescription"/>
     <module name="EmptyCatchBlock"/>

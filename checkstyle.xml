@@ -415,11 +415,6 @@
     <module name="NonEmptyAtclauseDescription"/>
 
     <!--
-      Exception handling: ban empty catch blocks.
-    -->
-    <module name="EmptyCatchBlock"/>
-
-    <!--
       Deprecated: require `@Deprecated` annotation and `@deprecated` JavaDoc tag
       if either are present.
     -->
@@ -442,12 +437,6 @@
       no more `javax.swing.SwingConstants`.
     -->
     <module name="InterfaceIsType"/>
-
-    <!--
-      Exceptions: ban mutable exceptions; be aware this only checks the fields
-      in the exception are declared final.
-    -->
-    <module name="MutableException"/>
 
     <!--
       Equals: if you define your own type-specific equals method e.g.
@@ -488,14 +477,6 @@
     <module name="StringLiteralEquality"/>
 
     <!--
-      Throws clause: limit the number of exceptions that can be declared in the
-      throws clause to 2.
-    -->
-    <module name="ThrowsCount">
-      <property name="max" value="2"/>
-    </module>
-
-    <!--
       Methods/constructors: limit the number of parameters that can be declared
       in a method/constructor to 3.
     -->
@@ -524,6 +505,17 @@
     <module name="IllegalType"/>
 
     <!--
+      Exceptions: ban mutable exceptions; be aware this only checks the fields
+      in the exception are declared final.
+    -->
+    <module name="MutableException"/>
+
+    <!--
+      Exception handling: ban empty catch blocks.
+    -->
+    <module name="EmptyCatchBlock"/>
+
+    <!--
       Exception handling: ban catching java.lang.Exception, java.lang.Throwable
       and java.lang.RuntimeException.
     -->
@@ -534,6 +526,14 @@
       java.lang.RuntimeException.
     -->
     <module name="IllegalThrows"/>
+
+    <!--
+      Throws clause: limit the number of exceptions that can be declared in the
+      throws clause to 2.
+    -->
+    <module name="ThrowsCount">
+      <property name="max" value="2"/>
+    </module>
 
   </module>
 </module>

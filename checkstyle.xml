@@ -17,62 +17,226 @@
     <!-- *** Style *** -->
     <!-- ************* -->
 
+    <!--
+      Line length: maximum 100 chars.
+    -->
     <module name="LineLength">
       <property name="ignorePattern" value="^package.*|^import.*|http(s)?://"/>
       <property name="max" value="100"/>
       <property name="tabWidth" value="4"/>
     </module>
+
+    <!--
+      Indent: 2 spaces.
+    -->
     <module name="Indentation">
       <property name="basicOffset" value="2"/>
       <property name="caseIndent" value="2"/>
     </module>
+
+    <!--
+      Array [] placement: with type rather than name e.g. String[] name.
+    -->
     <module name="ArrayTypeStyle"/>
+
+    <!--
+      Whitespace: require whitespace around standard symbols.
+    -->
     <module name="WhitespaceAround">
       <property name="allowEmptyConstructors" value="true"/>
       <property name="allowEmptyMethods" value="true"/>
       <property name="allowEmptyTypes" value="true"/>
       <property name="allowEmptyLambdas" value="true"/>
     </module>
+
+    <!--
+      Generics: enforce standard whitespace conventions for declaring generics.
+    -->
     <module name="GenericWhitespace"/>
+
+    <!--
+      Method/Constructor declarations & calls: ban padding immediately inside
+      parentheses.
+    -->
     <module name="MethodParamPad"/>
+
+    <!--
+      Operator wrapping: when wrapping, operators must be wrapped on to the
+      start of the new line rather than remaining on the end of the previous
+      line.
+    -->
     <module name="OperatorWrap"/>
+
+    <!--
+      Separator wrapping: when wrapping, commas must remain on the end of the
+      line rather than being wrapped onto the next line.
+    -->
     <module name="SeparatorWrap">
       <property name="tokens" value="COMMA"/>
     </module>
+
+    <!--
+      Separator wrapping: when wrapping, dots (i.e. in dot navigation) must be
+      wrapped on to the start of the new line rather than remaining on the end
+      of the previous line.
+    -->
     <module name="SeparatorWrap">
       <property name="option" value="nl"/>
       <property name="tokens" value="DOT"/>
     </module>
+
+    <!--
+      Braces: braces are required for `if`, `else`, `else if`, `for`, `do` &
+      `while`.
+    -->
     <module name="NeedBraces"/>
+
+    <!--
+      Left braces: must be at the end of the line.
+    -->
     <module name="LeftCurly">
       <property name="maxLineLength" value="100"/>
     </module>
+
+    <!--
+      Right braces: must be on the same line as `else`, `catch` and `finally`.
+    -->
     <module name="RightCurly"/>
+
+    <!--
+      Empty blocks: ban empty blocks.
+    -->
     <module name="EmptyBlock"/>
+
+    <!--
+      Empty lines: enforce empty lines after header, package, all import
+      declarations, fields, constructors, methods, nested classes, static
+      initializers and instance initializers.
+    -->
     <module name="EmptyLineSeparator">
       <property name="allowNoEmptyLineBetweenFields" value="true"/>
     </module>
+
+    <!--
+      Statements: enforce that statements are split onto separate lines.
+    -->
     <module name="OneStatementPerLine"/>
+
+    <!--
+      Multiple Variable Declarations: ban multiple variable declarations in the
+      same statement.
+    -->
     <module name="MultipleVariableDeclarations"/>
+
+    <!--
+      Declaration order: enforce declarations appear in the following order:
+
+        1. Class (static) variables. First the public class variables,
+           then protected, then package level (no access modifier), and then
+           private.
+        2. Instance variables. First the public class variables, then protected,
+           then package level (no access modifier), and then private.
+        3. Constructors
+        4. Methods
+    -->
     <module name="DeclarationOrder"/>
+
+    <!--
+      Declaration order: require overloaded methods be grouped together.
+    -->
     <module name="OverloadMethodsDeclarationOrder"/>
+
+    <!--
+      Modifiers: ban redundant modifiers (e.g. public for methods in an
+      interface).
+    -->
     <module name="RedundantModifier"/>
+
+    <!--
+      Modifier order: ensure modifiers appear in the following order:
+
+        1. public
+        2. protected
+        3. private
+        4. abstract
+        5. static
+        6. final
+        7. transient
+        8. volatile
+        9. synchronized
+        10. native
+        11. strictfp
+    -->
     <module name="ModifierOrder"/>
+
+    <!--
+      Annotation location: must be between JavaDoc and declaration, must be on
+      separate lines (excluding variable declarations).
+    -->
     <module name="AnnotationLocation">
       <property name="tokens" value="CLASS_DEF,INTERFACE_DEF,ENUM_DEF,METHOD_DEF,CTOR_DEF"/>
       <property name="allowSamelineSingleParameterlessAnnotation" value="false"/>
     </module>
+
+    <!--
+      Annotation location: multiple annotations are allowed on the same line for
+      variable declarations.
+    -->
     <module name="AnnotationLocation">
       <property name="tokens" value="VARIABLE_DEF"/>
       <property name="allowSamelineMultipleAnnotations" value="true"/>
     </module>
+
+    <!--
+      Doclet tag order: doclet tags must appear in the following order:
+
+         1. @author
+         2. @version
+         3. @param
+         4. @return
+         5. @throws
+         6. @exception
+         7. @see
+         8. @since
+         9. @serial
+         10. @serialField
+         11. @serialData
+         12. @deprecated
+    -->
     <module name="AtclauseOrder"/>
+
+    <!--
+      JavaDoc: continuation indent must be 4 spaces.
+    -->
     <module name="JavadocTagContinuationIndentation"/>
+
+    <!--
+      JavaDoc: Ensure that JavaDoc fits on within the line length and doclet
+      tags are at the beginning of a line.
+    -->
     <module name="SingleLineJavadoc">
       <property name="ignoreInlineTags" value="false"/>
     </module>
+
+    <!--
+      Imports: ban * imports.
+    -->
     <module name="AvoidStarImport"/>
+
+    <!--
+      Imports: ban redundant imports.
+    -->
     <module name="RedundantImport"/>
+
+    <!--
+      Import order:
+
+        1. Static imports
+        2. Blank line (only if both static and ordinary import are specified)
+        3. Ordinary imports
+
+        All imports are ordered alphabetically.
+     -->
     <module name="CustomImportOrder">
       <property name="customImportOrderRules" value="STATIC###THIRD_PARTY_PACKAGE"/>
       <property name="standardPackageRegExp" value="^$"/>
@@ -83,35 +247,104 @@
     <!-- *** Naming conventions *** -->
     <!-- ************************** -->
 
+    <!--
+      Naming: force abbreviations to be treated as words e.g. XmlHttpRequest or
+      XML_HTTP_REQUEST rather than XMLHTTPRequest.
+    -->
     <module name="AbbreviationAsWordInName">
       <property name="allowedAbbreviationLength" value="1"/>
       <property name="ignoreFinal" value="false"/>
     </module>
+
+    <!--
+      Package name: ASCII letters and digits only, all lowercase, root package
+      must be letters only, first char of each package must be a letter.
+    -->
     <module name="PackageName">
       <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
     </module>
+
+    <!--
+      Class/interface/enum name: ASCII letters and digits only, first char must
+      be an uppercase letter, second char must be a lower case letter or a
+      digit, min length 3 alphanumeric chars.
+    -->
     <module name="TypeName">
       <property name="format" value="^[A-Z][a-z0-9][a-zA-Z0-9]*$"/>
     </module>
+
+    <!--
+      Method name: ASCII letters and digits only, first char must be a lowercase
+      letter, second char must be a lower case letter or a digit, min length 3
+      alphanumeric chars.
+    -->
     <module name="MethodName">
       <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
     </module>
+
+    <!--
+      Parameter name: ASCII letters and digits only, first char must be a
+      lowercase letter, second char must be a lower case letter or a digit, min
+      length 3 alphanumeric chars.
+    -->
     <module name="ParameterName">
       <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
     </module>
+
+    <!--
+      Catch variable name: must be either:
+
+        * The single character 'e'.
+        * ASCII letters and digits only, first char must be a lowercase letter,
+          second char must be a lower case letter or a digit, min length 3
+          alphanumeric chars.
+    -->
     <module name="CatchParameterName">
       <property name="format" value="^(e|[a-z][a-z0-9][a-zA-Z0-9]*)$"/>
     </module>
+
+    <!--
+      Local variable name: must be either:
+
+        * ASCII letters and digits only, first char must be a lowercase letter,
+          second char must be a lower case letter or a digit, min length 3
+          alphanumeric chars.
+        * A single character: only permitted for the index in a for loop.
+    -->
     <module name="LocalVariableName">
       <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
       <property name="allowOneCharVarInForLoop" value="true"/>
     </module>
+
+    <!--
+      Generic type name (class): must be either:
+
+        * One ASCII letter optionally followed by a digit.
+        * ASCII letters and digits only, first char must be an uppercase letter,
+          must end with an uppercase 'T', min length 2 alphanumeric chars.
+    -->
     <module name="ClassTypeParameterName">
       <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
     </module>
+
+    <!--
+      Generic type name (method): must be either:
+
+        * One ASCII letter optionally followed by a digit.
+        * ASCII letters and digits only, first char must be an uppercase letter,
+          must end with an uppercase 'T', min length 2 alphanumeric chars.
+    -->
     <module name="MethodTypeParameterName">
       <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
     </module>
+
+    <!--
+      Generic type name (interface): must be either:
+
+        * One ASCII letter optionally followed by a digit.
+        * ASCII letters and digits only, first char must be an uppercase letter,
+          must end with an uppercase 'T', min length 2 alphanumeric chars.
+    -->
     <module name="InterfaceTypeParameterName">
       <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
     </module>
@@ -120,49 +353,186 @@
     <!-- *** Quality checks *** -->
     <!-- ********************** -->
 
+    <!--
+      Type name: ensure the outer class/interface/enum matches the file name.
+    -->
     <module name="OuterTypeFilename"/>
+
+    <!--
+      Escape sequences: use special escape sequence rather than the
+      octal/Unicode escape sequences for: \b, \t, \n, \f, \r, \", \' and \\
+    -->
     <module name="IllegalTokenText">
       <property name="tokens" value="CHAR_LITERAL,STRING_LITERAL"/>
       <property name="format" value="\\u00(08|09|0(a|A)|0(c|C)|0(d|D)|22|27|5(C|c))|\\(0(10|11|12|14|15|42|47)|134)"/>
       <property name="message" value="Use special escape sequence rather than octal/unicode for: \b, \t, \n, \f, \r, \&quot;, \' and \\"/>
     </module>
+
+    <!--
+      Unicode escapes: force use of UTF-8 characters rather than Unicode escape
+      sequences.
+    -->
     <module name="AvoidEscapedUnicodeCharacters">
       <property name="allowEscapesForControlCharacters" value="true"/>
       <property name="allowNonPrintableEscapes" value="true"/>
     </module>
+
+    <!--
+      Switch: all switch statements must have a default.
+    -->
     <module name="MissingSwitchDefault"/>
+
+    <!--
+      Switch: fall though cases must have a "fall through" comment.
+    -->
     <module name="FallThrough"/>
+
+    <!--
+      Longs: long literals must have an uppercase 'L' suffix.
+    -->
     <module name="UpperEll"/>
+
+    <!--
+      Finalize methods: finalize() methods are banned.
+    -->
     <module name="NoFinalizer"/>
+
+    <!--
+      Declaration usage: ensure the distance between declaration of a variable
+      and its use is no more than 3.
+    -->
     <module name="VariableDeclarationUsageDistance"/>
+
+    <!--
+      JavaDoc: Ensure classes, interfaces and enums have class level JavaDoc.
+    -->
     <module name="JavadocType"/>
+
+    <!--
+      JavaDoc: Ensure `@param`/`@return`/`@throws`/`@deprecated` description
+      isn't empty.
+    -->
     <module name="NonEmptyAtclauseDescription"/>
+
+    <!--
+      Exception handling: ban empty catch blocks.
+    -->
     <module name="EmptyCatchBlock"/>
+
+    <!--
+      Deprecated: require `@Deprecated` annotation and `@deprecated` JavaDoc tag
+      if either are present.
+    -->
     <module name="MissingDeprecated"/>
+
+    <!--
+      Override: require `@Overrides` annotation if `@inheritDoc` JavaDoc tag is
+      present.
+    -->
     <module name="MissingOverride"/>
+
+    <!--
+      Package annotations: ensure package annotations are only used in the
+      `package-info.java` file.
+    -->
     <module name="PackageAnnotation"/>
+
+    <!--
+      Interfaces: make sure interfaces contain methods and not just constants;
+      no more `javax.swing.SwingConstants`.
+    -->
     <module name="InterfaceIsType"/>
+
+    <!--
+      Exceptions: ban mutable exceptions; be aware this only checks the fields
+      in the exception are declared final.
+    -->
     <module name="MutableException"/>
+
+    <!--
+      Equals: if you define your own type-specific equals method e.g.
+      `Person.equals(Person)`, you must also override the default equals method
+      e.g. `Person.equals(Object)`.
+    -->
     <module name="CovariantEquals"/>
+
+    <!--
+      HashCode: if you override equals you must also override hashCode().
+    -->
     <module name="EqualsHashCode"/>
+
+    <!--
+      Numbers: ban magic numbers (i.e. numbers not defined with constants);
+      sensible exclusions apply (e.g. array initializers).
+    -->
     <module name="MagicNumber">
       <property name="constantWaiverParentToken" value="TYPECAST,METHOD_CALL,EXPR,ARRAY_INIT,UNARY_MINUS,UNARY_PLUS,ELIST,STAR,ASSIGN,PLUS,MINUS,DIV,LITERAL_NEW"/>
     </module>
+
+    <!--
+      Boolean logic: force obvious simplification of boolean logic e.g.
+      `if (value == true)` to `if (value)`.
+    -->
     <module name="SimplifyBooleanExpression"/>
+
+    <!--
+      Boolean returns: ban unnecessary `if` `else` blocks for boolean returns:
+      e.g. `if (booleanValue) {return true;} else { return false;}`
+      should be: `return booleanValue;`
+    -->
     <module name="SimplifyBooleanReturn"/>
+
+    <!--
+      String: ban use of identity equals on Strings literals.
+    -->
     <module name="StringLiteralEquality"/>
+
+    <!--
+      Throws clause: limit the number of exceptions that can be declared in the
+      throws clause to 2.
+    -->
     <module name="ThrowsCount">
       <property name="max" value="2"/>
     </module>
+
+    <!--
+      Methods/constructors: limit the number of parameters that can be declared
+      in a method/constructor to 3.
+    -->
     <module name="ParameterNumber">
       <property name="max" value="3"/>
     </module>
+
+    <!--
+      Initialization: ban explicitly initializing fields to their default
+      values.
+    -->
     <module name="ExplicitInitialization"/>
+
+    <!--
+      Wrapper types: ban using constructor of wrapper types.
+    -->
     <module name="IllegalInstantiation">
       <property name="classes" value="java.lang.Boolean, java.lang.Byte, java.lang.Character, java.lang.Double, java.lang.Float, java.lang.Integer, java.lang.Long, java.lang.Short"/>
     </module>
+
+    <!--
+      Collections: enforce using Collection interfaces for return types,
+      parameter types, fields, and local variables for basic collection
+      implementation types.
+    -->
     <module name="IllegalType"/>
+
+    <!--
+      Exception handling: ban catching java.lang.Exception, java.lang.Throwable
+      and java.lang.RuntimeException.
+    -->
     <module name="IllegalCatch"/>
+
+    <!--
+      Exception handling: ban throwing java.lang.Throwable, java.lang.Error and
+      java.lang.RuntimeException.
+    -->
     <module name="IllegalThrows"/>
 
   </module>

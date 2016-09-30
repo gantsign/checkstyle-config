@@ -1,5 +1,7 @@
 # GantSign Checkstyle Configuration
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Checkstyle configuration for Java code written by GantSign.
 
 # Severity Level
@@ -434,7 +436,8 @@ whether suppression of the rule is the appropriate solution.
 
 ## License
 
-MIT
+This software is licensed under the terms in the file named "[LICENSE](LICENSE)"
+in the root directory of this project.
 
 ## Author Information
 

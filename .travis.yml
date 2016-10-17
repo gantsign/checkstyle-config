@@ -1,0 +1,12 @@
+---
+addons:
+  apt:
+    packages:
+      # Update libxml
+      - libxml2
+      # Install xmllint
+      - libxml2-utils
+
+script:
+  # Check XML is valid
+  - xmllint --valid --noout checkstyle.xml

@@ -1,5 +1,6 @@
 # GantSign Checkstyle Configuration
 
+[![Build Status](https://travis-ci.org/gantsign/checkstyle-config.svg?branch=master)](https://travis-ci.org/gantsign/checkstyle-config)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Checkstyle configuration for Java code written by GantSign.

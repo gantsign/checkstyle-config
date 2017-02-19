@@ -30,6 +30,11 @@
 <module name="Checker">
   <property name="severity" value="error"/>
 
+  <!-- BeforeExecutionFileFilters is required for sources that are based on java9 -->
+  <module name="BeforeExecutionExclusionFileFilter">
+    <property name="fileNamePattern" value="module\-info\.java$" />
+  </module>
+
   <module name="SuppressWarningsFilter"/>
 
   <module name="TreeWalker">

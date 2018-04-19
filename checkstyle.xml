@@ -2,7 +2,7 @@
 <!--
   MIT License
 
-  Copyright (c) 2016 GantSign Ltd.
+  Copyright (c) 2016-2018 GantSign Ltd.
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -496,6 +496,8 @@
     -->
     <module name="MagicNumber">
       <property name="constantWaiverParentToken" value="TYPECAST,METHOD_CALL,EXPR,ARRAY_INIT,UNARY_MINUS,UNARY_PLUS,ELIST,STAR,ASSIGN,PLUS,MINUS,DIV,LITERAL_NEW"/>
+      <property name="ignoreHashCodeMethod" value="true"/>
+      <property name="ignoreAnnotation" value="true"/>
     </module>
 
     <!--

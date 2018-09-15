@@ -9,4 +9,4 @@ addons:
 
 script:
   # Check XML is valid
-  - xmllint --valid --noout checkstyle.xml
+  - xmllint --valid --path . --noout checkstyle.xml

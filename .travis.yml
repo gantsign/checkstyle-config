@@ -10,3 +10,9 @@ addons:
 script:
   # Check XML is valid
   - xmllint --valid --path . --noout checkstyle.xml
+
+branches:
+  only:
+    - master
+    - develop
+    - /^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)([\.\-].*)?$/

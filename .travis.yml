@@ -10,6 +10,7 @@ addons:
 script:
   # Check XML is valid
   - xmllint --valid --path . --noout checkstyle.xml
+  - xmllint --valid --path . --noout checkstyle-lenient.xml
 
 branches:
   only:

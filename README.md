@@ -1,6 +1,6 @@
 # GantSign Checkstyle Configuration
 
-[![Validation](https://github.com/gantsign/checkstyle-config/workflows/Tests/badge.svg)](https://github.com/gantsign/checkstyle-config/actions?query=workflow%3AValidation)
+[![Validation](https://github.com/gantsign/checkstyle-config/workflows/Validation/badge.svg)](https://github.com/gantsign/checkstyle-config/actions?query=workflow%3AValidation)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Checkstyle configuration for Java code written by GantSign.

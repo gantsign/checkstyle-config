@@ -15,7 +15,7 @@
 
     <module name="SuppressWarningsFilter"/>
 
-    <!-- Begin Google Java Style from Checkstyle 8.28 -->
+    <!-- Begin Google Java Style from Checkstyle 9.0 -->
     <!--
     Checkstyle configuration that checks the Google coding conventions from Google Java Style
     that can be found at https://google.github.io/styleguide/javaguide.html
@@ -270,6 +270,7 @@
                     PARAMETER_DEF, VARIABLE_DEF, METHOD_DEF, PATTERN_VARIABLE_DEF, RECORD_DEF,
                     RECORD_COMPONENT_DEF"/>
         </module>
+        <module name="NoWhitespaceBeforeCaseDefaultColon"/>
         <module name="OverloadMethodsDeclarationOrder"/>
         <module name="VariableDeclarationUsageDistance"/>
         <module name="CustomImportOrder">

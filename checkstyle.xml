@@ -8,7 +8,7 @@
     Description: Checkstyle rules for GantSign Java code.
 -->
 <module name="Checker">
-    <!-- Begin Google Java Style from Checkstyle 10.3.2 -->
+    <!-- Begin Google Java Style from Checkstyle 10.3.4 -->
     <!--
     Checkstyle configuration that checks the Google coding conventions from Google Java Style
     that can be found at https://google.github.io/styleguide/javaguide.html
@@ -353,7 +353,7 @@
             <property name="excludeScope" value="nothing"/>
         </module>
         <module name="MethodName">
-            <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>
+            <property name="format" value="^[a-z][a-z0-9]\w*$"/>
             <message key="name.invalidPattern"
              value="Method name ''{0}'' must match pattern ''{1}''."/>
         </module>

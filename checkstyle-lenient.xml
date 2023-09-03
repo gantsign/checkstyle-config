@@ -8,7 +8,7 @@
     Description: Checkstyle rules for GantSign Java code.
 -->
 <module name="Checker">
-    <!-- Begin Google Java Style from Checkstyle 10.10.0 -->
+    <!-- Begin Google Java Style from Checkstyle 10.12.3 -->
     <!--
     Checkstyle configuration that checks the Google coding conventions from Google Java Style
     that can be found at https://google.github.io/styleguide/javaguide.html
@@ -31,11 +31,11 @@
 
     <property name="fileExtensions" value="java, properties, xml"/>
     <!-- Excludes all 'module-info.java' files              -->
-    <!-- See https://checkstyle.org/config_filefilters.html -->
+    <!-- See https://checkstyle.org/filefilters/index.html -->
     <module name="BeforeExecutionExclusionFileFilter">
         <property name="fileNamePattern" value="module\-info\.java$"/>
     </module>
-    <!-- https://checkstyle.org/config_filters.html#SuppressionFilter -->
+    <!-- https://checkstyle.org/filters/suppressionfilter.html -->
     <module name="SuppressionFilter">
         <property name="file" value="${org.checkstyle.google.suppressionfilter.config}"
                   default="checkstyle-suppressions.xml" />
@@ -43,7 +43,7 @@
     </module>
 
     <!-- Checks for whitespace                               -->
-    <!-- See http://checkstyle.org/config_whitespace.html -->
+    <!-- See http://checkstyle.org/checks/whitespace/index.html -->
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
     </module>
@@ -366,7 +366,7 @@
         <module name="CommentsIndentation">
             <property name="tokens" value="SINGLE_LINE_COMMENT, BLOCK_COMMENT_BEGIN"/>
         </module>
-        <!-- https://checkstyle.org/config_filters.html#SuppressionXpathFilter -->
+        <!-- https://checkstyle.org/filters/suppressionxpathfilter.html -->
         <module name="SuppressionXpathFilter">
             <property name="file" value="${org.checkstyle.google.suppressionxpathfilter.config}"
                       default="checkstyle-xpath-suppressions.xml" />
